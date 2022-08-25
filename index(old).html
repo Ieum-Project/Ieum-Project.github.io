@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="icon" href="./src/app_logo.png">
+
+
+    <link rel="shortcut icon" sizes="192x192" href="./src/app_logo.png">
+
+    <meta name="apple-mobile-web-app-title" content="IEUM">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="apple-touch-icon" sizes="128x128" href="./src/app_logo.png">
+    <link rel="apple-touch-icon-precomposed" sizes="128x128" href="./src/app_logo.png">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEUM</title>
+</head>
+<body>
+    <img id="image" src="src/1.jpg" onclick="nextPage()"/>
+</body>
+<script>
+    var i=2;
+    var target = document.getElementById("image");
+    function nextPage(){
+        target.setAttribute('src','src/'+i+'.jpg');
+        if(i==13){
+            alert("감사합니다");
+        }
+        else{
+            i++;
+        }
+    }
+</script>
+<style>
+    html,body{
+        padding: 0%;
+        margin: 0%;
+    }
+    img{
+        width: 100%;
+    }
+</style>
+</html>
