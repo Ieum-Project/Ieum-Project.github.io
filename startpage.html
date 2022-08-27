@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="icon" href="./src/app_logo.png" />
+
+    <link rel="shortcut icon" sizes="192x192" href="./src/app_logo.png" />
+
+    <meta name="apple-mobile-web-app-title" content="Tandanji" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="apple-touch-icon" sizes="128x128" href="./src/app_logo.png" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="128x128"
+      href="./src/app_logo.png"
+    />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="./resource/css/font.css" />
+
+    <title>IEUM</title>
+  </head>
+  <body>
+    <!-- Header Start -->
+    <div class="head">
+      <div class="back">
+        <img src="./resource/svg/back.svg" style="text-align: center;"/>
+      </div>
+      <div class="logo">
+        <img src="./resource/svg/logo.svg"/>
+      </div>
+      <div class="setting">
+        <img src="./resource/svg/settings.svg"/>
+
+      </div>
+      <div class="alert">
+        <img src="./resource/svg/alert.svg"/>
+
+      </div>
+    </div>
+    <hr>
+    <!-- Header End -->
+
+    <!-- Navbar Start -->
+    <div class="navigation">
+      <div class="rail">
+        <button>정보입력</button>
+        <button class="active">기보기록</button>
+        <button>총평</button>
+      </div>
+    </div>
+    <!-- Navbar End -->
+
+    <div class="main">
+      <div class="textBox">
+        <div class="itemBox">
+          <p class="title">대회명</p>
+          <input class="text" placeholder="대화명을 적어주세요"/>
+        </div>
+        <div class="itemBox">
+          <p class="title">상대방 이름</p>
+          <input class="text" placeholder="대화명을 적어주세요"/>
+        </div>
+        <div class="itemBox">
+          <p class="title">나의 돌 선택</p>
+          <input class="text" placeholder="대화명을 적어주세요"/>
+        </div>
+        <div class="itemBox">
+          <p class="title">대국 결과</p>
+          <select class="text" name="language" >
+            <option value="none">=== 선택 ===</option>
+            <option value="1">불계</option>
+            <option value="2">시간</option>
+            <option value="3">0.5</option>
+          </select>
+        </div>
+        <div class="itemBox">
+          <p class="title">날짜</p>
+          <input class="text" type="date" placeholder="대화명을 적어주세요"/>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="buttonBox">
+        <button id="previous">< 이전</button>
+        <button id="next">저장 후 다음 ></button>
+      </div>
+    </div>
+  </body>
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+    /* Header Start */
+    .head{
+      display: flex;
+      width: 100%;
+      margin-top: 5%;
+      margin-bottom: 1%;
+    }
+    .back{
+      width: 10%;
+      position : relative;
+    }
+    .back img{
+      position : absolute;
+      left: 50%;
+      top:50%;
+      transform: translate(-50%,-50%);
+    }
+    .logo{
+      width: 70%; 
+      position : relative;
+    }
+    .logo img{
+      position : absolute;
+      top:50%;
+      transform: translate(0,-50%);
+    }
+    .setting{
+      width: 10%;
+      position : relative;
+    }
+    .setting img{
+      position : absolute;
+      top: 50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+    }
+    .alert{
+      width: 10%;
+      margin:0%;
+      position : relative;
+    }
+    .alert img{
+      position : absolute;
+      top: 50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+    }
+    hr{
+      margin:0;
+    }
+    /* Header End */
+
+    /* Navigation Start */
+    .rail{
+      position: absolute;
+      left: 50%;
+      top:50%;
+      transform: translate(-50%,-50%);
+      display: flex;
+      padding: 1%;
+      background: #5C6BEA;
+      box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 100px;
+      font-size: 13px;
+      width: 70%;
+    }
+    .navigation{
+      position: relative;
+      height: 10%;
+    }
+    .rail button{
+      width: 33%;
+      background: #5C6BEA;
+      border-radius: 100px;
+      border: 0px;
+      color: #C3C6DB;
+    }
+    .rail .active{
+      width: 33%;
+      background: #FAFAFA;
+      border-radius: 100px;
+      color: #5C6BEA;
+      font-weight: bold;
+    }
+    /* Navigation End */
+
+    .main{
+      background: #FFFFFF;
+      border: 0.5px solid #D9D9D9;
+      box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      margin-left: 5%;
+      margin-right: 5%;
+      height: 60%;
+      padding:5%;
+    }
+    .textBox{
+      display: flex;
+      flex-direction: column;
+    }
+    .itemBox{
+      display: flex;
+      width: 100%;
+    }
+    .title{
+      width: 30%;
+      color: #969696;
+      font-weight: 700;
+      font-size: 14px;
+      margin: 0;
+    }
+    .text{
+      width: 70%;
+      outline: 0;
+      border-width: 0 0 2px;
+      border-color: #D9D9D9;
+    }
+    input::placeholder {
+      font-size: 14px;
+      color: #C9C9C9;
+    }
+    /* ----- */
+    .bottom{
+      height: 20%;
+      position:relative;
+    }
+    .buttonBox{
+      width: 100%;
+      position:absolute;
+      top: 50%;
+      transform: translate(0%,-50%);
+      display: flex;
+      padding-left: 5%;
+      padding-right: 5%;
+      height: 40%;
+    }
+    #previous{
+      filter: drop-shadow(0px 1px 12px rgba(0, 0, 0, 0.1));
+      background: #F1F1F1;
+      border: 1px solid #D9D9D9;
+      border-radius: 10px;
+      font-family: 'Noto Sans KR';
+      font-weight: 700;
+      font-size: 16px;
+      color: #8A8A8A;
+      width: 30%;
+      margin: 1%;
+      
+    }
+    #next{
+      background: #FFFFFF;
+      border: 1px solid #2F43E5;
+      box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 16px;
+      color: #2F43E5;
+      width: 70%;
+      margin: 1%;
+    }
+  </style>
+</html>
