@@ -38,21 +38,19 @@
     <!-- Header Start -->
     <div class="head">
       <div class="back">
-        <img src="./resource/svg/back.svg" style="text-align: center;"/>
+        <img src="./resource/svg/back.svg" style="text-align: center" />
       </div>
       <div class="logo">
-        <img src="./resource/svg/logo.svg"/>
+        <img src="./resource/svg/logo.svg" />
       </div>
       <div class="setting">
-        <img src="./resource/svg/settings.svg"/>
-
+        <img src="./resource/svg/settings.svg" />
       </div>
       <div class="alert">
-        <img src="./resource/svg/alert.svg"/>
-
+        <img src="./resource/svg/alert.svg" />
       </div>
     </div>
-    <hr>
+    <hr />
     <!-- Header End -->
 
     <!-- Navbar Start -->
@@ -69,28 +67,77 @@
       <div class="textBox">
         <div class="itemBox">
           <p class="title">대회명</p>
-          <input class="text" placeholder="대화명을 적어주세요"/>
+          <input class="text" placeholder="대화명을 적어주세요" />
         </div>
         <div class="itemBox">
           <p class="title">상대방 이름</p>
-          <input class="text" placeholder="대화명을 적어주세요"/>
+          <input class="text" placeholder="대화명을 적어주세요" />
         </div>
         <div class="itemBox">
           <p class="title">나의 돌 선택</p>
-          <input class="text" placeholder="대화명을 적어주세요"/>
+          <div class="radiogroup">
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="inlineRadioOptions"
+                id="inlineRadio1"
+                value="option1"
+              />
+              <label class="form-check-label" for="inlineRadio1">흑돌</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="inlineRadioOptions"
+                id="inlineRadio2"
+                value="option2"
+              />
+              <label class="form-check-label" for="inlineRadio2">백돌</label>
+            </div>
+          </div>
         </div>
         <div class="itemBox">
           <p class="title">대국 결과</p>
-          <select class="text" name="language" >
-            <option value="none">=== 선택 ===</option>
-            <option value="1">불계</option>
-            <option value="2">시간</option>
-            <option value="3">0.5</option>
-          </select>
+          <div class="result">
+            <select
+              class="text"
+              name="language"
+              style="width: 100%; margin-bottom: 5%"
+            >
+              <option value="none">=== 선택 ===</option>
+              <option value="1">불계</option>
+              <option value="2">시간</option>
+              <option value="3">0.5</option>
+            </select>
+            <div class="resultItem">
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="inlineRadio1"
+                  value="option1"
+                />
+                <label class="form-check-label" for="inlineRadio1">승</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="inlineRadio2"
+                  value="option2"
+                />
+                <label class="form-check-label" for="inlineRadio2">패</label>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="itemBox">
           <p class="title">날짜</p>
-          <input class="text" type="date" placeholder="대화명을 적어주세요"/>
+          <input class="text" type="date" placeholder="대화명을 적어주세요" />
         </div>
       </div>
     </div>
@@ -107,164 +154,183 @@
       height: 100%;
     }
     /* Header Start */
-    .head{
+    .head {
       display: flex;
       width: 100%;
       margin-top: 5%;
       margin-bottom: 1%;
     }
-    .back{
+    .back {
       width: 10%;
-      position : relative;
+      position: relative;
     }
-    .back img{
-      position : absolute;
+    .back img {
+      position: absolute;
       left: 50%;
-      top:50%;
-      transform: translate(-50%,-50%);
-    }
-    .logo{
-      width: 70%; 
-      position : relative;
-    }
-    .logo img{
-      position : absolute;
-      top:50%;
-      transform: translate(0,-50%);
-    }
-    .setting{
-      width: 10%;
-      position : relative;
-    }
-    .setting img{
-      position : absolute;
       top: 50%;
-      left:50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
     }
-    .alert{
-      width: 10%;
-      margin:0%;
-      position : relative;
+    .logo {
+      width: 70%;
+      position: relative;
     }
-    .alert img{
-      position : absolute;
+    .logo img {
+      position: absolute;
       top: 50%;
-      left:50%;
-      transform: translate(-50%,-50%);
+      transform: translate(0, -50%);
     }
-    hr{
-      margin:0;
+    .setting {
+      width: 10%;
+      position: relative;
+    }
+    .setting img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .alert {
+      width: 10%;
+      margin: 0%;
+      position: relative;
+    }
+    .alert img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    hr {
+      margin: 0;
     }
     /* Header End */
 
     /* Navigation Start */
-    .rail{
+    .rail {
       position: absolute;
       left: 50%;
-      top:50%;
-      transform: translate(-50%,-50%);
+      top: 50%;
+      transform: translate(-50%, -50%);
       display: flex;
       padding: 1%;
-      background: #5C6BEA;
+      background: #5c6bea;
       box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.1);
       border-radius: 100px;
       font-size: 13px;
       width: 70%;
     }
-    .navigation{
+    .navigation {
       position: relative;
       height: 10%;
     }
-    .rail button{
+    .rail button {
       width: 33%;
-      background: #5C6BEA;
+      background: #5c6bea;
       border-radius: 100px;
       border: 0px;
-      color: #C3C6DB;
+      color: #c3c6db;
     }
-    .rail .active{
+    .rail .active {
       width: 33%;
-      background: #FAFAFA;
+      background: #fafafa;
       border-radius: 100px;
-      color: #5C6BEA;
+      color: #5c6bea;
       font-weight: bold;
     }
     /* Navigation End */
 
-    .main{
-      background: #FFFFFF;
-      border: 0.5px solid #D9D9D9;
+    .main {
+      background: #ffffff;
+      border: 0.5px solid #d9d9d9;
       box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.1);
       border-radius: 10px;
       margin-left: 5%;
       margin-right: 5%;
       height: 60%;
-      padding:5%;
+      padding: 5%;
     }
-    .textBox{
+    .textBox {
       display: flex;
       flex-direction: column;
+      height: 100%;
+      justify-content: space-around;
     }
-    .itemBox{
+    .itemBox {
       display: flex;
       width: 100%;
     }
-    .title{
+    .title {
       width: 30%;
       color: #969696;
       font-weight: 700;
       font-size: 14px;
       margin: 0;
     }
-    .text{
+    .text {
       width: 70%;
       outline: 0;
       border-width: 0 0 2px;
-      border-color: #D9D9D9;
+      border-color: #d9d9d9;
     }
     input::placeholder {
       font-size: 14px;
-      color: #C9C9C9;
+      color: #c9c9c9;
     }
     /* ----- */
-    .bottom{
+    .bottom {
       height: 20%;
-      position:relative;
+      position: relative;
     }
-    .buttonBox{
+    .buttonBox {
       width: 100%;
-      position:absolute;
+      position: absolute;
       top: 50%;
-      transform: translate(0%,-50%);
+      transform: translate(0%, -50%);
       display: flex;
       padding-left: 5%;
       padding-right: 5%;
       height: 40%;
     }
-    #previous{
+    #previous {
       filter: drop-shadow(0px 1px 12px rgba(0, 0, 0, 0.1));
-      background: #F1F1F1;
-      border: 1px solid #D9D9D9;
+      background: #f1f1f1;
+      border: 1px solid #d9d9d9;
       border-radius: 10px;
-      font-family: 'Noto Sans KR';
+      font-family: "Noto Sans KR";
       font-weight: 700;
       font-size: 16px;
-      color: #8A8A8A;
+      color: #8a8a8a;
       width: 30%;
       margin: 1%;
-      
     }
-    #next{
-      background: #FFFFFF;
-      border: 1px solid #2F43E5;
+    #next {
+      background: #ffffff;
+      border: 1px solid #2f43e5;
       box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.1);
       border-radius: 10px;
       font-weight: 700;
       font-size: 16px;
-      color: #2F43E5;
+      color: #2f43e5;
       width: 70%;
       margin: 1%;
+    }
+    .radiogroup {
+      display: flex;
+      width: 70%;
+      justify-content: space-around;
+    }
+    .form-check-input {
+      accent-color: red;
+    }
+    .result {
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+    }
+    .resultItem {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
     }
   </style>
 </html>
